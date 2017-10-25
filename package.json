@@ -1,0 +1,22 @@
+{
+  "name": "utf8-to-win1251-api",
+  "version": "1.0.0",
+  "description": "RESTful API for convert text from utf8 to win1251",
+  "main": "server.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/malahovKS/utf8-to-win1251-api.git"
+  },
+  "keywords": [
+    "utf8"
+  ],
+  "author": "kirill-malakhov",
+  "license": "Apache-2.0",
+  "bugs": {
+    "url": "https://github.com/malahovKS/utf8-to-win1251-api/issues"
+  },
+  "homepage": "https://github.com/malahovKS/utf8-to-win1251-api#readme"
+}
