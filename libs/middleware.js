@@ -1,6 +1,5 @@
 import compression from "compression";
 import cors from "cors";
-import bodyParser from "body-parser";
 import log from "../libs/log";
 import morgan from "morgan";
 
@@ -17,8 +16,6 @@ module.exports = app => {
 
 	app.disable('x-powered-by');
 	app.use(compression());
-	app.use(bodyParser.json({limit: '5mb'}));
-	app.use(bodyParser.text({limit: '5mb'}));
 	app.use('/api', cors({
 		methods: ["POST", "GET"]
 	}));

@@ -1,8 +1,10 @@
 import log from "../libs/log";
 import iconv from "iconv-lite";
+import bodyParser from "body-parser";
 
 module.exports = app => {
 
+	const bp = bodyParser.text({limit: '5mb'});
 	app.get("/api/utf8towin1251", (req, res) => {
 		return res.status(200).json({status: "utf8 ot win1251 API"});
 
@@ -11,20 +13,17 @@ module.exports = app => {
 
 	});
 
-	app.post("/api/utf8towin1251", (req, res) => {
+	app.post("/api/utf8towin1251", bp, (req, res) => {
 
-		//if (!req.body) return res.sendStatus(400);
+		if (!req.body) return res.sendStatus(400);
 
-		// log.debug(req.body);
-		// const win1251 = iconv.encode(req.body, "win1251");
-		// log.debug(win1251);
-		//
-		// res.type('text/plain');
-		// res.status(200).send(win1251);
-		// res.flush();
+		log.debug(req.body);
+		const win1251 = iconv.encode(req.body, "win1251");
+		log.debug(win1251);
 
-		log.debug(req.headers);
-		res.status(200).send(req.body);
+		res.type('text/plain', 'charset=win-1251');
+		res.status(200).send(win1251);
+		res.flush();
 
 	});
 };
