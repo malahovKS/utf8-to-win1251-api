@@ -142,3 +142,8 @@ fabric.properties
 .dropbox.attr
 .dropbox.cache
 
+/*.env
+
+#IDE metadata
+.idea/
+
