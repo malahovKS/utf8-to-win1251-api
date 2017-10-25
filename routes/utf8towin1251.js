@@ -15,13 +15,16 @@ module.exports = app => {
 
 		//if (!req.body) return res.sendStatus(400);
 
-		log.debug(req.body);
-		const win1251 = iconv.encode(req.body, "win1251");
-		log.debug(win1251);
+		// log.debug(req.body);
+		// const win1251 = iconv.encode(req.body, "win1251");
+		// log.debug(win1251);
+		//
+		// res.type('text/plain');
+		// res.status(200).send(win1251);
+		// res.flush();
 
-		res.type('text/plain');
-		res.status(200).send(win1251);
-		res.flush();
+		log.debug(req.headers);
+		res.status(200).send(req.body);
 
 	});
 };
