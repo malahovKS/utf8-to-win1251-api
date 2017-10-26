@@ -21,12 +21,12 @@ module.exports = app => {
 	}));
 
 	//--- catch 404 & 500
-	app.use((req, res, next) => {
+	app.use((req, res) => {
 		res.sendStatus(404);
 		log.error('404 URL not found: %s', req.url);
 	});
 	// Internal Server Error; Generic error message when server fails
-	app.use((err, req, res, next) => {
+	app.use((err, req, res) => {
 		res.sendStatus(500);
 		log.error('500 Internal error(%d): %s', res.statusCode, err);
 	});
