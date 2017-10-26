@@ -6,11 +6,7 @@ module.exports = app => {
 
 	const textBodyParser = bodyParser.text({limit: '5mb'});
 	app.get("/api/utf8towin1251", (req, res) => {
-		return res.status(200).json({status: "utf8 ot win1251 API"});
-
-		//TODO res.flush() (node:28258) DeprecationWarning: OutgoingMessage.flush is deprecated. Use flushHeaders instead.
-		// res.flush();
-
+		return res.status(200).json({status: "OK"});
 	});
 
 	app.post("/api/utf8towin1251", textBodyParser, (req, res) => {
