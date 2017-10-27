@@ -3,8 +3,10 @@ import cors from "cors";
 import log from "../libs/log";
 import morgan from "morgan";
 
+const port = process.env.PORT;
+
 module.exports = app => {
-	app.set("port", 3002);
+	app.set("port", port);
 	app.set("json spaces", 4);
 
 	//log each request
