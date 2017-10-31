@@ -15,6 +15,7 @@ To run program you will need:
 
 ```
 $ git clone https://github.com/malakhovks/utf8-to-win1251-api.git
+$ npm install
 ```
 
 ### Use cases
