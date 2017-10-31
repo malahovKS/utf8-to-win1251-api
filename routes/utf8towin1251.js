@@ -5,9 +5,6 @@ import bodyParser from "body-parser";
 module.exports = app => {
 
 	const textBodyParser = bodyParser.text({limit: '5mb'});
-	app.get("/api/utf8towin1251", (req, res) => {
-		return res.status(200).json({status: "OK"});
-	});
 
 	app.post("/api/utf8towin1251", textBodyParser, (req, res) => {
 

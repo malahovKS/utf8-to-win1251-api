@@ -1,17 +1,22 @@
 {
   "name": "utf8-to-win1251-api",
-  "version": "1.0.0",
+  "version": "0.1.0",
   "description": "RESTful API for convert text from utf8 to win1251",
   "main": "server.js",
   "scripts": {
-    "start": "PORT=3002 babel-node server.js",
-    "start-production": "PORT=3002 NODE_ENV=production babel-node server.js",
+    "start": "NODE_ENV=development babel-node server.js",
+    "start-development": "NODE_ENV=development babel-node server.js",
+    "start-production": "NODE_ENV=production babel-node server.js",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/malahovKS/utf8-to-win1251-api.git"
+    "url": "git+https://github.com/malakhovks/utf8-to-win1251-api.git"
   },
+  "bugs": {
+    "url": "https://github.com/malakhovks/utf8-to-win1251-api/issues"
+  },
+  "homepage": "https://github.com/malakhovks/utf8-to-win1251-api#readme",
   "keywords": [
     "service",
     "microservice",
@@ -24,15 +29,12 @@
   ],
   "author": "kirill-malakhov",
   "license": "Apache-2.0",
-  "bugs": {
-    "url": "https://github.com/malahovKS/utf8-to-win1251-api/issues"
-  },
-  "homepage": "https://github.com/malahovKS/utf8-to-win1251-api#readme",
   "dependencies": {
     "babel-cli": "^6.26.0",
     "babel-preset-env": "^1.6.1",
     "body-parser": "^1.18.2",
     "compression": "^1.7.1",
+    "config": "^1.27.0",
     "consign": "^0.1.6",
     "cors": "^2.8.4",
     "express": "^4.16.2",
