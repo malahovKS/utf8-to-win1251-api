@@ -12,7 +12,6 @@ module.exports = app => {
 
 		log.debug(req.body);
 		const win1251 = iconv.encode(req.body, "win1251");
-		log.debug(win1251);
 
 		res.set({'content-type': 'text/plain;charset=win-1251'});
 		res.status(200).send(win1251);
